@@ -31,20 +31,22 @@ module.exports = (grunt) ->
             files: ['*.styl']
             tasks: ['salt', 'stylus']
 
-        bumpup:
-            file: 'package.json'
+        shell:
+            apm:
+                command: 'apm publish patch'
 
     ### 
     npm install --save-dev grunt-contrib-stylus
     npm install --save-dev grunt-contrib-watch
-    npm install --save-dev grunt-bumpup
     npm install --save-dev grunt-pepper
+    npm install --save-dev grunt-shell
     ###
 
     grunt.loadNpmTasks 'grunt-contrib-stylus'
     grunt.loadNpmTasks 'grunt-contrib-watch'
-    grunt.loadNpmTasks 'grunt-bumpup'
     grunt.loadNpmTasks 'grunt-pepper'
+    grunt.loadNpmTasks 'grunt-shell'
 
     grunt.registerTask 'default',   [ 'build' ]
-    grunt.registerTask 'build',     [ 'bumpup', 'salt', 'stylus' ]
+    grunt.registerTask 'build',     [ 'salt', 'stylus' ]
+    grunt.registerTask 'publish',   [ 'build', 'shell:apm' ]
