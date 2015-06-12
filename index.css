@@ -1,0 +1,5 @@
+atom-text-editor, :host 
+{ 
+    background: #000000;
+    color:      #dddddd;
+}
