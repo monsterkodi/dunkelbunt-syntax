@@ -9,6 +9,4 @@ apm install dunkelbunt-syntax
 ```
 ## Preview:
 
-### CoffeeScript:
-
 ![screenshot](http://???.png)

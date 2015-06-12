@@ -9,10 +9,6 @@ module.exports = (grunt) ->
                 dryrun  : false
                 verbose : false
                 refresh : false
-            coffee:
-                files:
-                    'asciiHeader' : ['./coffee/**/*.coffee']
-                    'asciiText'   : ['./coffee/**/*.coffee']
             style: 
                 options:
                     verbose     : false
@@ -21,7 +17,7 @@ module.exports = (grunt) ->
                     textFill    : '*  '
                     textPostfix : '*/'
                 files:
-                    'asciiText' : ['./style/*.styl']
+                    'asciiText' : ['*.styl']
 
         stylus:
             compile:
@@ -31,7 +27,7 @@ module.exports = (grunt) ->
         watch:
           scripts:
             files: ['*.styl']
-            tasks: ['stylus']
+            tasks: ['salt', 'stylus']
 
         bumpup:
             file: 'package.json'

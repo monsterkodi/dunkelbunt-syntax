@@ -1,0 +1,57 @@
+/*
+*   0000000   0000000   000       0000000   00000000    0000000
+*  000       000   000  000      000   000  000   000  000     
+*  000       000   000  000      000   000  0000000    0000000 
+*  000       000   000  000      000   000  000   000       000
+*   0000000   0000000   0000000   0000000   000   000  0000000 
+*/
+ 
+color                  = {}
+color.black            = #000000
+color.gray-very-dark   = #222222
+color.gray-dark        = #444444
+color.gray             = #888888
+color.gray-bright      = #cccccc
+color.gray-very-bright = #dddddd
+color.yellow           = #ffff00
+color.orange           = #ff8800
+
+color.background     = color.black
+color.text           = color.gray-bright
+color.comment        = color.gray-dark
+color.comment-marker = color.gray-very-dark
+color.comment-block  = color.orange
+
+/*
+*   0000000   00000000  000   000  00000000  00000000    0000000   000    
+*  000        000       0000  000  000       000   000  000   000  000    
+*  000  0000  0000000   000 0 000  0000000   0000000    000000000  000    
+*  000   000  000       000  0000  000       000   000  000   000  000    
+*   0000000   00000000  000   000  00000000  000   000  000   000  0000000
+*/
+
+atom-text-editor
+:host
+    background: color.background
+    color: color.text
+    
+/*
+*   0000000   000   000  000000000  000000000  00000000  00000000 
+*  000        000   000     000        000     000       000   000
+*  000  0000  000   000     000        000     0000000   0000000  
+*  000   000  000   000     000        000     000       000   000
+*   0000000    0000000      000        000     00000000  000   000
+*/
+
+.gutter 
+    background: color.gray-very-dark
+
+    .line-numbers
+        color: color.orange
+    .line-number 
+        color: color.grey-dark
+
+        &.cursor-line-no-selection 
+        &.cursor-line 
+            background: color.gray-dark
+            color: color.gray

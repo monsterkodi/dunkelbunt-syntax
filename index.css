@@ -1,5 +1,1 @@
-atom-text-editor, :host 
-{ 
-    background: #000000;
-    color:      #dddddd;
-}
+atom-text-editor,:host{background:#000;color:#ccc}.gutter{background:#222;}.gutter .line-numbers{color:#f80}.gutter .line-number{color:;}.gutter .line-number.cursor-line-no-selection,.gutter .line-number.cursor-line{background:#444;color:#888}
