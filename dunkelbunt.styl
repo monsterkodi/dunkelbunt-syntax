@@ -6,7 +6,7 @@
 *   0000000   0000000   0000000   0000000   000   000  0000000 
 */
  
-color                  = {}
+color                  = {} 
 color.black            = #000000
 color.gray-most-dark   = #181818
 color.gray-very-dark   = #282828
@@ -126,29 +126,52 @@ atom-text-editor::shadow
     .text
     .source
 
+        .entity
         .class
             color: color.yellow
-            &.storage // class keyword
-                color: color.blue-bright
+            &.punctuation
+                color: darken(color.orange-bright, 20)
+        .attribute-name
+            color: color.orange-bright
+            
+        .storage // class, var, etc
+            color: color.blue-bright
 
         .function 
             .name 
                 color: color.orange-bright
-            &.storage // ???
-                color: color.red
+            &.storage // -> =>
+                color: color.blue
             &.support // require
                 color: color.gray-dark
             
         .brace
             &.round  
                 color: color.blue-medium
-            &.curly
-                color: color.gray-dark
             &.square
                 color: color.blue-bright                    
+        
+        .meta.selector.css
+        .brace.curly
+        .punctuation.property-list
+            color: color.gray-dark
 
+        .tag
+            color: color.gray
+        .tag.punctuation
+        .terminator
+            color: color.gray-dark
+
+        .dictionary
+            color: color.gray
+            &.separator
+                color: color.gray-dark
+                &.key-value 
+                    color: color.gray-dark
+        
         .comma
             color: color.blue
+        
         .period
             color: color.gray
 
@@ -178,41 +201,12 @@ atom-text-editor::shadow
             color: color.yellow-bright
         
         .variable.assignment // local variables and dict keys
-        .property-name
             color: color.variable
+        .property-name
+            color: color.blue-bright
         
         .separator.key-value   
             color: darken(color.variable, 50)
             
-        // 
-        //     &.regexp { color: @color-orange; }
-        // 
-        //     // Coffee: #{ variable }
-        //     .embedded.source { color: @color-green_sea-2; }
-        // }
-        // 
-        // .storage {
-        //     // Coffee: ->
-        //     &.type.function { color: @color-brown; }
-        //     &.modifier { color: @color-brown; }
-        //     &.class { color: @color-red_pale; }
-        // }
-        // 
-        // .entity {
-        //     &.instance { color: @color-blue_pale; }
-        //     &.type.object { color: @color-red_pale; }
-        // }
-        // 
-        // .support {
-        //     // Coffee: eg. window, document
-        //     &.class { color: @color-blue_pale; }
-        // 
-        //     // Coffee: eg. push, indexOf
-        //     &.function { color: @color-orange; }
-        // }
-        // 
-        // // Coffee: eg. null, false, true, undefined
-        // .constant { color: @color-yellow_light; }
-        // 
-        // // Coffee: eg. this
-        // .language.variable { color: @color-yellow_light; }
+        &.stylus
+            color: color.blue

@@ -20,6 +20,8 @@ module.exports = (grunt) ->
                     'asciiText' : ['*.styl']
 
         stylus:
+            options:
+                compress: false
             compile:
                 files:
                     'index.css': ['dunkelbunt.styl']
