@@ -8,20 +8,27 @@
  
 color                  = {}
 color.black            = #000000
-color.gray-very-dark   = #222222
+color.gray-most-dark   = #181818
+color.gray-very-dark   = #282828
 color.gray-dark        = #444444
 color.gray             = #888888
 color.gray-bright      = #cccccc
 color.gray-very-bright = #dddddd
 color.yellow           = #ffff00
 color.orange           = #ff8800
+color.blue             = #4444ff
+color.blue-dark        = #2222aa
 
+// color types
 color.background     = color.black
 color.text           = color.gray-bright
-color.comment        = color.gray-dark
+color.comment        = #282828
 color.comment-marker = color.gray-very-dark
 color.comment-block  = color.orange
+color.selection      = color.gray-dark
+color.cursor-line    = color.gray-most-dark
 
+//______________________________________________________________________________________________________________________
 /*
 *   0000000   00000000  000   000  00000000  00000000    0000000   000    
 *  000        000       0000  000  000       000   000  000   000  000    
@@ -29,29 +36,69 @@ color.comment-block  = color.orange
 *  000   000  000       000  0000  000       000   000  000   000  000    
 *   0000000   00000000  000   000  00000000  000   000  000   000  0000000
 */
-
-atom-text-editor
 :host
+atom-text-editor
+
     background: color.background
-    color: color.text
+    color:      color.text
+    .selection .region
+        background-color: color.selection
+        border-radius: 4px
+    .text
+    .source
+        color: color.text
+        
+        .comment
+            color: color.comment
+            &.block
+                color: color.comment-block
+                
+            &.punctuation
+                color: color.comment-marker
+                
+            .selection
+            &.selection
+                color: color.orange
+            
+atom-text-editor::shadow
+
+    //__________________________________________________________________________________________________________________
+    /*
+    *   0000000   000   000  000000000  000000000  00000000  00000000 
+    *  000        000   000     000        000     000       000   000
+    *  000  0000  000   000     000        000     0000000   0000000  
+    *  000   000  000   000     000        000     000       000   000
+    *   0000000    0000000      000        000     00000000  000   000
+    */
+    .gutter 
+        background: color.black
+        border-right: 1px solid color.gray-most-dark
+            
+        .line-number 
+            color: color.gray-dark
+
+            &.cursor-line-no-selection 
+            &.cursor-line 
+                background: color.cursor-line
+                color: color.gray-dark
+            
+    //__________________________________________________________________________________________________________________            
+    /*
+    *   0000000   000   000  000  0000000    00000000   0000000
+    *  000        000   000  000  000   000  000       000     
+    *  000  0000  000   000  000  000   000  0000000   0000000 
+    *  000   000  000   000  000  000   000  000            000
+    *   0000000    0000000   000  0000000    00000000  0000000 
+    */
+    .wrap-guide
+        background-color: color.gray-very-dark
+
+    .invisible-character
+        color: color.gray-dark
+
+    .indent-guide
+        color: color.gray-very-dark
+            
+    .line.cursor-line
+        background-color: color.cursor-line
     
-/*
-*   0000000   000   000  000000000  000000000  00000000  00000000 
-*  000        000   000     000        000     000       000   000
-*  000  0000  000   000     000        000     0000000   0000000  
-*  000   000  000   000     000        000     000       000   000
-*   0000000    0000000      000        000     00000000  000   000
-*/
-
-.gutter 
-    background: color.gray-very-dark
-
-    .line-numbers
-        color: color.orange
-    .line-number 
-        color: color.grey-dark
-
-        &.cursor-line-no-selection 
-        &.cursor-line 
-            background: color.gray-dark
-            color: color.gray
