@@ -6,16 +6,16 @@ module.exports = (grunt) ->
 
         salt:
             options:
-                dryrun  : false
-                verbose : false
-                refresh : false
+                dryrun:  false
+                verbose: false
+                refresh: false
             style: 
                 options:
-                    verbose     : false
-                    textMarker  : '//!!'
-                    textPrefix  : '/*'
-                    textFill    : '*  '
-                    textPostfix : '*/'
+                    verbose:     false
+                    textMarker:  '//!!'
+                    textPrefix:  '/*'
+                    textFill:    '*  '
+                    textPostfix: '*/'
                 files:
                     'asciiText' : ['*.styl']
 

@@ -14,19 +14,30 @@ color.gray-dark        = #444444
 color.gray             = #888888
 color.gray-bright      = #cccccc
 color.gray-very-bright = #dddddd
+color.white            = #ffffff
+color.yellow-bright    = #ffff88
 color.yellow           = #ffff00
+color.orange-bright    = #ffaa00
 color.orange           = #ff8800
-color.blue             = #4444ff
+color.red              = #ff0000
+color.green-bright     = #00ff00
+color.green            = #00aa00
+color.green-dark       = #006600
 color.blue-dark        = #2222aa
+color.blue             = #4444ff
+color.blue-medium      = #6666ff
+color.blue-bright      = #8888ff
+color.blue-very-bright = #aaaaff
 
-// color types
+// main color types
 color.background     = color.black
 color.text           = color.gray-bright
-color.comment        = #282828
+color.comment        = #333333
 color.comment-marker = color.gray-very-dark
 color.comment-block  = color.orange
 color.selection      = color.gray-dark
 color.cursor-line    = color.gray-most-dark
+color.variable       = color.yellow-bright
 
 //______________________________________________________________________________________________________________________
 /*
@@ -38,6 +49,7 @@ color.cursor-line    = color.gray-most-dark
 */
 :host
 atom-text-editor
+atom-text-editor::shadow
 
     background: color.background
     color:      color.text
@@ -70,7 +82,7 @@ atom-text-editor::shadow
     *  000   000  000   000     000        000     000       000   000
     *   0000000    0000000      000        000     00000000  000   000
     */
-    .gutter 
+    .gutter
         background: color.black
         border-right: 1px solid color.gray-most-dark
             
@@ -93,12 +105,114 @@ atom-text-editor::shadow
     .wrap-guide
         background-color: color.gray-very-dark
 
-    .invisible-character
-        color: color.gray-dark
-
     .indent-guide
         color: color.gray-very-dark
+
+    .invisible-character
+        color: color.gray-dark
             
     .line.cursor-line
         background-color: color.cursor-line
     
+    //__________________________________________________________________________________________________________________            
+    /*
+    *   0000000   0000000   000   000  00000000    0000000  00000000
+    *  000       000   000  000   000  000   000  000       000     
+    *  0000000   000   000  000   000  0000000    000       0000000 
+    *       000  000   000  000   000  000   000  000       000     
+    *  0000000    0000000    0000000   000   000   0000000  00000000
+    */
+    
+    .text
+    .source
+
+        .class
+            color: color.yellow
+            &.storage // class keyword
+                color: color.blue-bright
+
+        .function 
+            .name 
+                color: color.orange-bright
+            &.storage // ???
+                color: color.red
+            &.support // require
+                color: color.gray-dark
+            
+        .brace
+            &.round  
+                color: color.blue-medium
+            &.curly
+                color: color.gray-dark
+            &.square
+                color: color.blue-bright                    
+
+        .comma
+            color: color.blue
+        .period
+            color: color.gray
+
+        .constant
+            color: color.blue-bright
+            &.numeric  
+                color: color.blue-very-bright
+                
+        .keyword // new, =, -, +, :, isnt, is
+            &.operator 
+                color: color.blue-medium
+            &.control  // do, if, return, then, switch, for
+                color: color.blue-bright
+
+        .variable            
+            &.parameter.function
+                color: color.blue-bright
+
+            color: color.blue-very-bright
+                
+        .string
+            color: color.green
+            &.punctuation.definition
+                color: color.green-dark
+                                
+        .inherited-class
+            color: color.yellow-bright
+        
+        .variable.assignment // local variables and dict keys
+        .property-name
+            color: color.variable
+        
+        .separator.key-value   
+            color: darken(color.variable, 50)
+            
+        // 
+        //     &.regexp { color: @color-orange; }
+        // 
+        //     // Coffee: #{ variable }
+        //     .embedded.source { color: @color-green_sea-2; }
+        // }
+        // 
+        // .storage {
+        //     // Coffee: ->
+        //     &.type.function { color: @color-brown; }
+        //     &.modifier { color: @color-brown; }
+        //     &.class { color: @color-red_pale; }
+        // }
+        // 
+        // .entity {
+        //     &.instance { color: @color-blue_pale; }
+        //     &.type.object { color: @color-red_pale; }
+        // }
+        // 
+        // .support {
+        //     // Coffee: eg. window, document
+        //     &.class { color: @color-blue_pale; }
+        // 
+        //     // Coffee: eg. push, indexOf
+        //     &.function { color: @color-orange; }
+        // }
+        // 
+        // // Coffee: eg. null, false, true, undefined
+        // .constant { color: @color-yellow_light; }
+        // 
+        // // Coffee: eg. this
+        // .language.variable { color: @color-yellow_light; }
