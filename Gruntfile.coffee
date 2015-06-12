@@ -34,6 +34,8 @@ module.exports = (grunt) ->
         shell:
             apm:
                 command: 'apm publish patch'
+            open:
+                command: 'open https://atom.io/packages/dunkelbunt-syntax'
 
     ### 
     npm install --save-dev grunt-contrib-stylus
@@ -49,4 +51,4 @@ module.exports = (grunt) ->
 
     grunt.registerTask 'default',   [ 'build' ]
     grunt.registerTask 'build',     [ 'salt', 'stylus' ]
-    grunt.registerTask 'publish',   [ 'build', 'shell:apm' ]
+    grunt.registerTask 'publish',   [ 'build', 'shell:apm', 'shell:open' ]
