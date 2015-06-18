@@ -11,6 +11,7 @@ color.black            = #000000
 color.gray-most-dark   = #181818
 color.gray-very-dark   = #282828
 color.gray-dark        = #444444
+color.gray-medium      = #555555
 color.gray             = #888888
 color.gray-bright      = #cccccc
 color.gray-very-bright = #dddddd
@@ -30,7 +31,7 @@ color.blue-bright      = #8888ff
 color.blue-very-bright = #aaaaff
 
 // main colors
-color.comment        = #333333
+color.comment        = #555555
 color.background     = color.black
 color.text           = color.gray-bright
 color.comment-marker = color.gray-very-dark
@@ -83,16 +84,17 @@ atom-text-editor::shadow
     *   0000000    0000000      000        000     00000000  000   000
     */
     .gutter
+        font-weight: bold
         background: color.black
         border-right: 1px solid color.gray-most-dark
             
         .line-number 
-            color: color.gray-dark
+            color: color.gray-medium
 
             &.cursor-line-no-selection 
             &.cursor-line 
                 background: color.cursor-line
-                color: color.gray-dark
+                color: color.orange
             
     //__________________________________________________________________________________________________________________            
     /*
@@ -141,7 +143,7 @@ atom-text-editor::shadow
             .name 
                 color: color.orange-bright
             &.storage // -> =>
-                color: color.blue
+                color: color.blue-medium
             &.support // require
                 color: color.gray-dark
             

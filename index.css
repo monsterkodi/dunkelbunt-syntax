@@ -38,7 +38,7 @@ atom-text-editor::shadow .text .comment,
 :host .source .comment,
 atom-text-editor .source .comment,
 atom-text-editor::shadow .source .comment {
-  color: #333;
+  color: #555;
 }
 :host .text .comment.block,
 atom-text-editor .text .comment.block,
@@ -71,16 +71,17 @@ atom-text-editor::shadow .source .comment.selection {
   color: #f80;
 }
 atom-text-editor::shadow .gutter {
+  font-weight: bold;
   background: #000;
   border-right: 1px solid #181818;
 }
 atom-text-editor::shadow .gutter .line-number {
-  color: #444;
+  color: #555;
 }
 atom-text-editor::shadow .gutter .line-number.cursor-line-no-selection,
 atom-text-editor::shadow .gutter .line-number.cursor-line {
   background: #181818;
-  color: #444;
+  color: #f80;
 }
 atom-text-editor::shadow .wrap-guide {
   background-color: #282828;
@@ -120,7 +121,7 @@ atom-text-editor::shadow .source .function .name {
 }
 atom-text-editor::shadow .text .function.storage,
 atom-text-editor::shadow .source .function.storage {
-  color: #44f;
+  color: #66f;
 }
 atom-text-editor::shadow .text .function.support,
 atom-text-editor::shadow .source .function.support {
