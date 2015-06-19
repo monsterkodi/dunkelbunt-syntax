@@ -95,6 +95,12 @@ atom-text-editor::shadow .invisible-character {
 atom-text-editor::shadow .line.cursor-line {
   background-color: #181818;
 }
+atom-text-editor::shadow .text .meta.preprocessor.include.c,
+atom-text-editor::shadow .source .meta.preprocessor.include.c,
+atom-text-editor::shadow .text .meta.preprocessor.macro.c,
+atom-text-editor::shadow .source .meta.preprocessor.macro.c {
+  color: #44f;
+}
 atom-text-editor::shadow .text .entity,
 atom-text-editor::shadow .source .entity,
 atom-text-editor::shadow .text .class,
@@ -126,6 +132,10 @@ atom-text-editor::shadow .source .function.storage {
 atom-text-editor::shadow .text .function.support,
 atom-text-editor::shadow .source .function.support {
   color: #444;
+}
+atom-text-editor::shadow .text .function-call .function,
+atom-text-editor::shadow .source .function-call .function {
+  color: #aaf;
 }
 atom-text-editor::shadow .text .brace.round,
 atom-text-editor::shadow .source .brace.round {

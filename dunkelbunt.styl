@@ -28,7 +28,7 @@ color.blue-dark        = #2222aa
 color.blue             = #4444ff
 color.blue-medium      = #6666ff
 color.blue-bright      = #8888ff
-color.blue-very-bright = #aaaaff
+color.blue-very-bright = #aaaaff 
 
 // main colors
 color.comment        = #555555
@@ -128,6 +128,10 @@ atom-text-editor::shadow
     .text
     .source
 
+        .meta.preprocessor.include.c     
+        .meta.preprocessor.macro.c
+            color: color.blue
+
         .entity
         .class
             color: color.yellow
@@ -139,14 +143,17 @@ atom-text-editor::shadow
         .storage // class, var, etc
             color: color.blue-bright
 
-        .function 
-            .name 
+        .function
+            .name
                 color: color.orange-bright
+        
             &.storage // -> =>
                 color: color.blue-medium
             &.support // require
                 color: color.gray-dark
-            
+        .function-call .function
+                color: color.blue-very-bright
+                        
         .brace
             &.round  
                 color: color.blue-medium
@@ -157,7 +164,7 @@ atom-text-editor::shadow
         .brace.curly
         .punctuation.property-list
             color: color.gray-dark
-
+            
         .tag
             color: color.gray
         .tag.punctuation
