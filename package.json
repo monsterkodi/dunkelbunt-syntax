@@ -1,7 +1,7 @@
 {
   "name": "dunkelbunt-syntax",
   "theme": "syntax",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": true,
   "description": "Atom syntax theme with highly saturated colors on a very dark (black) background",
   "repository": {
