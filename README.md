@@ -1,6 +1,6 @@
-# Dunkelbunt Syntax Theme
+# Dunkelbunt
 
-A syntax theme for Atom with bright and saturated colors on a black background.
+Atom syntax theme with highly saturated colors on a very dark (black) background.
 
 ![screenshot](https://raw.githubusercontent.com/monsterkodi/dunkelbunt-syntax/master/dunkelbunt.png)
 

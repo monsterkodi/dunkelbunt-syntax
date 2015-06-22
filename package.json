@@ -1,9 +1,9 @@
 {
   "name": "dunkelbunt-syntax",
   "theme": "syntax",
-  "version": "0.1.7",
-  "private": false,
-  "description": "syntax theme for Atom with bright and saturated colors on a black background",
+  "version": "0.1.4",
+  "private": true,
+  "description": "Atom syntax theme with highly saturated colors on a very dark (black) background",
   "repository": {
     "type": "git",
     "url": "https://github.com/monsterkodi/dunkelbunt-syntax"
