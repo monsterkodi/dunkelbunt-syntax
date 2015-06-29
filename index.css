@@ -121,9 +121,13 @@ atom-text-editor::shadow .text .storage,
 atom-text-editor::shadow .source .storage {
   color: #aaf;
 }
-atom-text-editor::shadow .text .function .name,
-atom-text-editor::shadow .source .function .name {
-  color: #fa0;
+atom-text-editor::shadow .text .function,
+atom-text-editor::shadow .source .function {
+  color: #aaf;
+}
+atom-text-editor::shadow .text .function.name,
+atom-text-editor::shadow .source .function.name {
+  color: #ff8;
 }
 atom-text-editor::shadow .text .function.storage,
 atom-text-editor::shadow .source .function.storage {
@@ -131,16 +135,28 @@ atom-text-editor::shadow .source .function.storage {
 }
 atom-text-editor::shadow .text .function.support,
 atom-text-editor::shadow .source .function.support {
-  color: #444;
+  color: #888;
 }
-atom-text-editor::shadow .text .function-call .function,
-atom-text-editor::shadow .source .function-call .function {
+atom-text-editor::shadow .text .function-call,
+atom-text-editor::shadow .source .function-call {
+  color: #fa0;
+}
+atom-text-editor::shadow .text .function-call.arguments,
+atom-text-editor::shadow .source .function-call.arguments {
   color: #aaf;
+}
+atom-text-editor::shadow .text .function.parameter,
+atom-text-editor::shadow .source .function.parameter {
+  color: #fa0;
 }
 atom-text-editor::shadow .text .brace.round,
 atom-text-editor::shadow .source .brace.round {
   color: #66f;
 }
+atom-text-editor::shadow .text .meta.structure.list,
+atom-text-editor::shadow .source .meta.structure.list,
+atom-text-editor::shadow .text .meta.item-access,
+atom-text-editor::shadow .source .meta.item-access,
 atom-text-editor::shadow .text .brace.square,
 atom-text-editor::shadow .source .brace.square {
   color: #88f;
@@ -175,6 +191,8 @@ atom-text-editor::shadow .text .dictionary.separator.key-value,
 atom-text-editor::shadow .source .dictionary.separator.key-value {
   color: #444;
 }
+atom-text-editor::shadow .text .punctuation.separator.parameters,
+atom-text-editor::shadow .source .punctuation.separator.parameters,
 atom-text-editor::shadow .text .comma,
 atom-text-editor::shadow .source .comma {
   color: #44f;
@@ -198,6 +216,10 @@ atom-text-editor::shadow .source .keyword.operator {
 atom-text-editor::shadow .text .keyword.control,
 atom-text-editor::shadow .source .keyword.control {
   color: #88f;
+}
+atom-text-editor::shadow .text .keyword.control.import,
+atom-text-editor::shadow .source .keyword.control.import {
+  color: #888;
 }
 atom-text-editor::shadow .text .variable,
 atom-text-editor::shadow .source .variable {

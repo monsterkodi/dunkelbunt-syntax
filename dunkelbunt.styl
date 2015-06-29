@@ -28,7 +28,7 @@ color.blue-dark        = #2222aa
 color.blue             = #4444ff
 color.blue-medium      = #6666ff
 color.blue-bright      = #8888ff
-color.blue-very-bright = #aaaaff 
+color.blue-very-bright = #aaaaff
 
 // main colors
 color.comment        = #555555
@@ -144,20 +144,25 @@ atom-text-editor::shadow
             color: color.blue-very-bright
 
         .function
-            .name
-                color: color.orange-bright
-        
+            color: color.blue-very-bright
+            &.name
+                color: color.yellow-bright
             &.storage // -> =>
                 color: color.blue-medium
-            &.support // require
-                color: color.gray-dark
-        .function-call .function
+            &.support // require, len, indexOf. etc
+                color: color.gray
+        .function-call
+            color: color.orange-bright
+            &.arguments
                 color: color.blue-very-bright
-                        
-        .brace
-            &.round  
-                color: color.blue-medium
-            &.square
+        .function.parameter
+            color: color.orange-bright
+                            
+        .brace.round  
+            color: color.blue-medium
+        .meta.structure.list
+        .meta.item-access
+        .brace.square
                 color: color.blue-bright                    
         
         .meta.selector.css
@@ -178,6 +183,7 @@ atom-text-editor::shadow
                 &.key-value 
                     color: color.gray-dark
         
+        .punctuation.separator.parameters
         .comma
             color: color.blue
         
@@ -194,6 +200,8 @@ atom-text-editor::shadow
                 color: color.blue-medium
             &.control  // do, if, return, then, switch, for
                 color: color.blue-bright
+                &.import
+                    color: color.gray
 
         .variable            
             &.parameter.function
