@@ -163,19 +163,13 @@ atom-text-editor::shadow
         .meta.structure.list
         .meta.item-access
         .brace.square
-                color: color.blue-bright                    
+                color: color.blue-bright
         
         .meta.selector.css
         .brace.curly
         .punctuation.property-list
             color: color.gray-dark
             
-        .tag
-            color: color.gray
-        .tag.punctuation
-        .terminator
-            color: color.gray-dark
-
         .dictionary
             color: color.gray
             &.separator
@@ -227,3 +221,15 @@ atom-text-editor::shadow
             
         &.stylus
             color: color.blue
+
+        .tag
+            color: color.gray
+            &.entity
+                color: color.blue-bright
+            &.class
+                color: color.blue-very-bright
+            &.id
+                color: color.yellow
+        .tag.punctuation
+        .terminator
+            color: color.gray-dark

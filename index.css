@@ -169,16 +169,6 @@ atom-text-editor::shadow .text .punctuation.property-list,
 atom-text-editor::shadow .source .punctuation.property-list {
   color: #444;
 }
-atom-text-editor::shadow .text .tag,
-atom-text-editor::shadow .source .tag {
-  color: #888;
-}
-atom-text-editor::shadow .text .tag.punctuation,
-atom-text-editor::shadow .source .tag.punctuation,
-atom-text-editor::shadow .text .terminator,
-atom-text-editor::shadow .source .terminator {
-  color: #444;
-}
 atom-text-editor::shadow .text .dictionary,
 atom-text-editor::shadow .source .dictionary {
   color: #888;
@@ -256,4 +246,26 @@ atom-text-editor::shadow .source .separator.key-value {
 atom-text-editor::shadow .text.stylus,
 atom-text-editor::shadow .source.stylus {
   color: #44f;
+}
+atom-text-editor::shadow .text .tag,
+atom-text-editor::shadow .source .tag {
+  color: #888;
+}
+atom-text-editor::shadow .text .tag.entity,
+atom-text-editor::shadow .source .tag.entity {
+  color: #88f;
+}
+atom-text-editor::shadow .text .tag.class,
+atom-text-editor::shadow .source .tag.class {
+  color: #aaf;
+}
+atom-text-editor::shadow .text .tag.id,
+atom-text-editor::shadow .source .tag.id {
+  color: #ff0;
+}
+atom-text-editor::shadow .text .tag.punctuation,
+atom-text-editor::shadow .source .tag.punctuation,
+atom-text-editor::shadow .text .terminator,
+atom-text-editor::shadow .source .terminator {
+  color: #444;
 }
