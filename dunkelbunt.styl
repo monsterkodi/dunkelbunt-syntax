@@ -35,7 +35,7 @@ color.comment        = #555555
 color.background     = color.black
 color.text           = color.gray-bright
 color.comment-marker = color.gray-very-dark
-color.comment-block  = color.orange
+color.comment-block  = color.comment
 color.selection      = color.gray-dark
 color.cursor-line    = color.gray-most-dark
 color.variable       = color.yellow-bright
@@ -56,7 +56,7 @@ atom-text-editor::shadow
     color:      color.text
     .selection .region
         background-color: color.selection
-        border-radius: 4px
+        border-radius:    4px
     .text
     .source
         color: color.text
@@ -233,3 +233,44 @@ atom-text-editor::shadow
         .tag.punctuation
         .terminator
             color: color.gray-dark
+
+        &.noon
+            color: #ff8
+
+        .key.noon
+            color: #f80
+
+        .punctuation.array.noon
+            color: #88f
+
+        .punctuation.dense.noon
+            color: #444
+            font-weight: bold
+
+        .key.dense.noon
+            color: #888
+
+        .constant.color.noon
+            color: #faa
+
+        .punctuation.bracket.noon
+            color: #884
+
+        .punctuation.dot.noon
+            color: #a60
+            font-weight: bold
+
+        .punctuation.dim.noon
+            color: #a60
+
+        .punctuation.regex.noon
+            color: #f0f
+            font-weight: bold
+
+        .punctuation.key.escape.noon
+            color: #600    
+            font-weight: bold
+
+        .punctuation.value.escape.noon
+            color: #333    
+            font-weight: bold

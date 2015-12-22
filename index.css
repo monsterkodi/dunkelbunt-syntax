@@ -46,7 +46,7 @@ atom-text-editor::shadow .text .comment.block,
 :host .source .comment.block,
 atom-text-editor .source .comment.block,
 atom-text-editor::shadow .source .comment.block {
-  color: #f80;
+  color: #555;
 }
 :host .text .comment.punctuation,
 atom-text-editor .text .comment.punctuation,
@@ -247,6 +247,7 @@ atom-text-editor::shadow .text.stylus,
 atom-text-editor::shadow .source.stylus {
   color: #44f;
 }
+<<<<<<< HEAD
 atom-text-editor::shadow .text .tag,
 atom-text-editor::shadow .source .tag {
   color: #888;
@@ -268,4 +269,57 @@ atom-text-editor::shadow .source .tag.punctuation,
 atom-text-editor::shadow .text .terminator,
 atom-text-editor::shadow .source .terminator {
   color: #444;
+
+atom-text-editor::shadow .text.noon,
+atom-text-editor::shadow .source.noon {
+  color: #ff8;
+}
+atom-text-editor::shadow .text .key.noon,
+atom-text-editor::shadow .source .key.noon {
+  color: #f80;
+}
+atom-text-editor::shadow .text .punctuation.array.noon,
+atom-text-editor::shadow .source .punctuation.array.noon {
+  color: #88f;
+}
+atom-text-editor::shadow .text .punctuation.dense.noon,
+atom-text-editor::shadow .source .punctuation.dense.noon {
+  color: #444;
+  font-weight: bold;
+}
+atom-text-editor::shadow .text .key.dense.noon,
+atom-text-editor::shadow .source .key.dense.noon {
+  color: #888;
+}
+atom-text-editor::shadow .text .constant.color.noon,
+atom-text-editor::shadow .source .constant.color.noon {
+  color: #faa;
+}
+atom-text-editor::shadow .text .punctuation.bracket.noon,
+atom-text-editor::shadow .source .punctuation.bracket.noon {
+  color: #884;
+}
+atom-text-editor::shadow .text .punctuation.dot.noon,
+atom-text-editor::shadow .source .punctuation.dot.noon {
+  color: #a60;
+  font-weight: bold;
+}
+atom-text-editor::shadow .text .punctuation.dim.noon,
+atom-text-editor::shadow .source .punctuation.dim.noon {
+  color: #a60;
+}
+atom-text-editor::shadow .text .punctuation.regex.noon,
+atom-text-editor::shadow .source .punctuation.regex.noon {
+  color: #f0f;
+  font-weight: bold;
+}
+atom-text-editor::shadow .text .punctuation.key.escape.noon,
+atom-text-editor::shadow .source .punctuation.key.escape.noon {
+  color: #600;
+  font-weight: bold;
+}
+atom-text-editor::shadow .text .punctuation.value.escape.noon,
+atom-text-editor::shadow .source .punctuation.value.escape.noon {
+  color: #333;
+  font-weight: bold;
 }
