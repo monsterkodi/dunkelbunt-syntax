@@ -247,7 +247,6 @@ atom-text-editor::shadow .text.stylus,
 atom-text-editor::shadow .source.stylus {
   color: #44f;
 }
-<<<<<<< HEAD
 atom-text-editor::shadow .text .tag,
 atom-text-editor::shadow .source .tag {
   color: #888;
@@ -269,7 +268,7 @@ atom-text-editor::shadow .source .tag.punctuation,
 atom-text-editor::shadow .text .terminator,
 atom-text-editor::shadow .source .terminator {
   color: #444;
-
+}
 atom-text-editor::shadow .text.noon,
 atom-text-editor::shadow .source.noon {
   color: #ff8;
