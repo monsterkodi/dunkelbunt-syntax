@@ -1,28 +1,20 @@
 {
-  "name": "dunkelbunt-syntax",
-  "theme": "syntax",
-  "version": "0.1.11",
-  "private": true,
-  "description": "Atom syntax theme with highly saturated colors on a very dark (black) background",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/monsterkodi/dunkelbunt-syntax"
-  },
-  "license": "Public Domain",
-  "engines": {
-    "atom": ">0.200.0"
-  },
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/monsterkodi/dunkelbunt-syntax/issues"
-  },
-  "homepage": "https://github.com/monsterkodi/dunkelbunt-syntax",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-bumpup": "^0.6.2",
-    "grunt-contrib-stylus": "^0.21.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-pepper": "^0.4.7",
-    "grunt-shell": "^1.1.2"
-  }
+    "name": "dunkelbunt-syntax",
+    "theme": "syntax",
+    "version": "0.2.0",
+    "private": true,
+    "description": "Atom syntax theme with highly saturated colors on a very dark (black) background",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/monsterkodi/dunkelbunt-syntax"
+    },
+    "license": "Unlicense",
+    "engines": {
+        "atom": ">0.200.0"
+    },
+    "readmeFilename": "README.md",
+    "bugs": {
+        "url": "https://github.com/monsterkodi/dunkelbunt-syntax/issues"
+    },
+    "homepage": "https://github.com/monsterkodi/dunkelbunt-syntax"
 }

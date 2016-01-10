@@ -1,6 +1,0 @@
-{
-    "cmd": "grunt",
-    "args": ["build"],
-    "sh": true,
-    "cwd": "/Users/kodi/Projects/dunkelbunt-syntax"
-}

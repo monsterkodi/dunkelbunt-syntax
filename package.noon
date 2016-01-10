@@ -1,0 +1,15 @@
+name            dunkelbunt-syntax
+theme           syntax
+version         0.2.0
+private         true
+description     Atom syntax theme with highly saturated colors on a very dark (black) background
+repository      
+                type    git
+                url     https://github.com/monsterkodi/dunkelbunt-syntax
+license         Unlicense
+engines         
+                atom    >0.200.0
+readmeFilename  README.md
+bugs            
+                url     https://github.com/monsterkodi/dunkelbunt-syntax/issues
+homepage        https://github.com/monsterkodi/dunkelbunt-syntax
