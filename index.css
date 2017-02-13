@@ -12,313 +12,299 @@
 *  000   000  000       000  0000  000       000   000  000   000  000    
 *   0000000   00000000  000   000  00000000  000   000  000   000  0000000
 */
-:host,
 atom-text-editor,
-atom-text-editor::shadow {
+atom-text-editor.editor {
   background: #000;
   color: #ccc;
 }
-:host .selection .region,
 atom-text-editor .selection .region,
-atom-text-editor::shadow .selection .region {
+atom-text-editor.editor .selection .region {
   background-color: #444;
   border-radius: 4px;
 }
-:host .text,
-atom-text-editor .text,
-atom-text-editor::shadow .text,
-:host .source,
-atom-text-editor .source,
-atom-text-editor::shadow .source {
+atom-text-editor .syntax--text,
+atom-text-editor.editor .syntax--text,
+atom-text-editor .syntax--source,
+atom-text-editor.editor .syntax--source {
   color: #ccc;
 }
-:host .text .comment,
-atom-text-editor .text .comment,
-atom-text-editor::shadow .text .comment,
-:host .source .comment,
-atom-text-editor .source .comment,
-atom-text-editor::shadow .source .comment {
+atom-text-editor .syntax--text .syntax--comment,
+atom-text-editor.editor .syntax--text .syntax--comment,
+atom-text-editor .syntax--source .syntax--comment,
+atom-text-editor.editor .syntax--source .syntax--comment {
   color: #555;
 }
-:host .text .comment.block,
-atom-text-editor .text .comment.block,
-atom-text-editor::shadow .text .comment.block,
-:host .source .comment.block,
-atom-text-editor .source .comment.block,
-atom-text-editor::shadow .source .comment.block {
+atom-text-editor .syntax--text .syntax--comment.syntax--block,
+atom-text-editor.editor .syntax--text .syntax--comment.syntax--block,
+atom-text-editor .syntax--source .syntax--comment.syntax--block,
+atom-text-editor.editor .syntax--source .syntax--comment.syntax--block {
   color: #555;
 }
-:host .text .comment.punctuation,
-atom-text-editor .text .comment.punctuation,
-atom-text-editor::shadow .text .comment.punctuation,
-:host .source .comment.punctuation,
-atom-text-editor .source .comment.punctuation,
-atom-text-editor::shadow .source .comment.punctuation {
+atom-text-editor .syntax--text .syntax--comment.syntax--punctuation,
+atom-text-editor.editor .syntax--text .syntax--comment.syntax--punctuation,
+atom-text-editor .syntax--source .syntax--comment.syntax--punctuation,
+atom-text-editor.editor .syntax--source .syntax--comment.syntax--punctuation {
   color: #282828;
 }
-:host .text .comment .selection,
-atom-text-editor .text .comment .selection,
-atom-text-editor::shadow .text .comment .selection,
-:host .source .comment .selection,
-atom-text-editor .source .comment .selection,
-atom-text-editor::shadow .source .comment .selection,
-:host .text .comment.selection,
-atom-text-editor .text .comment.selection,
-atom-text-editor::shadow .text .comment.selection,
-:host .source .comment.selection,
-atom-text-editor .source .comment.selection,
-atom-text-editor::shadow .source .comment.selection {
+atom-text-editor .syntax--text .syntax--comment .selection,
+atom-text-editor.editor .syntax--text .syntax--comment .selection,
+atom-text-editor .syntax--source .syntax--comment .selection,
+atom-text-editor.editor .syntax--source .syntax--comment .selection,
+atom-text-editor .syntax--text .syntax--comment.selection,
+atom-text-editor.editor .syntax--text .syntax--comment.selection,
+atom-text-editor .syntax--source .syntax--comment.selection,
+atom-text-editor.editor .syntax--source .syntax--comment.selection {
   color: #f80;
 }
-atom-text-editor::shadow .gutter {
+atom-text-editor.editor .gutter {
   font-weight: bold;
   background: #000;
   border-right: 1px solid #181818;
 }
-atom-text-editor::shadow .gutter .line-number {
+atom-text-editor.editor .gutter .line-number {
   color: #555;
 }
-atom-text-editor::shadow .gutter .line-number.cursor-line-no-selection,
-atom-text-editor::shadow .gutter .line-number.cursor-line {
+atom-text-editor.editor .gutter .line-number.cursor-line-no-selection,
+atom-text-editor.editor .gutter .line-number.cursor-line {
   background: #181818;
   color: #f80;
 }
-atom-text-editor::shadow .wrap-guide {
+atom-text-editor.editor .wrap-guide {
   background-color: #282828;
 }
-atom-text-editor::shadow .indent-guide {
+atom-text-editor.editor .indent-guide {
   color: #282828;
 }
-atom-text-editor::shadow .invisible-character {
+atom-text-editor.editor .invisible-character {
   color: #444;
 }
-atom-text-editor::shadow .line.cursor-line {
+atom-text-editor.editor .line.cursor-line {
   background-color: #181818;
 }
-atom-text-editor::shadow .text .meta.preprocessor.include.c,
-atom-text-editor::shadow .source .meta.preprocessor.include.c,
-atom-text-editor::shadow .text .meta.preprocessor.macro.c,
-atom-text-editor::shadow .source .meta.preprocessor.macro.c {
+atom-text-editor.editor .syntax--text .syntax--meta.syntax--preprocessor.syntax--include.syntax--c,
+atom-text-editor.editor .syntax--source .syntax--meta.syntax--preprocessor.syntax--include.syntax--c,
+atom-text-editor.editor .syntax--text .syntax--meta.syntax--preprocessor.syntax--macro.syntax--c,
+atom-text-editor.editor .syntax--source .syntax--meta.syntax--preprocessor.syntax--macro.syntax--c {
   color: #44f;
 }
-atom-text-editor::shadow .text .entity,
-atom-text-editor::shadow .source .entity,
-atom-text-editor::shadow .text .class,
-atom-text-editor::shadow .source .class {
+atom-text-editor.editor .syntax--text .syntax--entity,
+atom-text-editor.editor .syntax--source .syntax--entity,
+atom-text-editor.editor .syntax--text .syntax--class,
+atom-text-editor.editor .syntax--source .syntax--class {
   color: #ff0;
 }
-atom-text-editor::shadow .text .entity.punctuation,
-atom-text-editor::shadow .source .entity.punctuation,
-atom-text-editor::shadow .text .class.punctuation,
-atom-text-editor::shadow .source .class.punctuation {
+atom-text-editor.editor .syntax--text .syntax--entity.syntax--punctuation,
+atom-text-editor.editor .syntax--source .syntax--entity.syntax--punctuation,
+atom-text-editor.editor .syntax--text .syntax--class.syntax--punctuation,
+atom-text-editor.editor .syntax--source .syntax--class.syntax--punctuation {
   color: #960;
 }
-atom-text-editor::shadow .text .attribute-name,
-atom-text-editor::shadow .source .attribute-name {
+atom-text-editor.editor .syntax--text .syntax--attribute-name,
+atom-text-editor.editor .syntax--source .syntax--attribute-name {
   color: #fa0;
 }
-atom-text-editor::shadow .text .storage,
-atom-text-editor::shadow .source .storage {
+atom-text-editor.editor .syntax--text .syntax--storage,
+atom-text-editor.editor .syntax--source .syntax--storage {
   color: #aaf;
 }
-atom-text-editor::shadow .text .function,
-atom-text-editor::shadow .source .function {
+atom-text-editor.editor .syntax--text .syntax--function,
+atom-text-editor.editor .syntax--source .syntax--function {
   color: #aaf;
 }
-atom-text-editor::shadow .text .function.name,
-atom-text-editor::shadow .source .function.name {
+atom-text-editor.editor .syntax--text .syntax--function.syntax--name,
+atom-text-editor.editor .syntax--source .syntax--function.syntax--name {
   color: #ff8;
 }
-atom-text-editor::shadow .text .function.storage,
-atom-text-editor::shadow .source .function.storage {
+atom-text-editor.editor .syntax--text .syntax--function.syntax--storage,
+atom-text-editor.editor .syntax--source .syntax--function.syntax--storage {
   color: #66f;
 }
-atom-text-editor::shadow .text .function.support,
-atom-text-editor::shadow .source .function.support {
+atom-text-editor.editor .syntax--text .syntax--function.syntax--support,
+atom-text-editor.editor .syntax--source .syntax--function.syntax--support {
   color: #888;
 }
-atom-text-editor::shadow .text .function-call,
-atom-text-editor::shadow .source .function-call {
+atom-text-editor.editor .syntax--text .syntax--function-call,
+atom-text-editor.editor .syntax--source .syntax--function-call {
   color: #fa0;
 }
-atom-text-editor::shadow .text .function-call.arguments,
-atom-text-editor::shadow .source .function-call.arguments {
+atom-text-editor.editor .syntax--text .syntax--function-call.syntax--arguments,
+atom-text-editor.editor .syntax--source .syntax--function-call.syntax--arguments {
   color: #aaf;
 }
-atom-text-editor::shadow .text .function.parameter,
-atom-text-editor::shadow .source .function.parameter {
+atom-text-editor.editor .syntax--text .syntax--function.syntax--parameter,
+atom-text-editor.editor .syntax--source .syntax--function.syntax--parameter {
   color: #fa0;
 }
-atom-text-editor::shadow .text .brace.round,
-atom-text-editor::shadow .source .brace.round {
+atom-text-editor.editor .syntax--text .syntax--brace.syntax--round,
+atom-text-editor.editor .syntax--source .syntax--brace.syntax--round {
   color: #66f;
 }
-atom-text-editor::shadow .text .meta.structure.list,
-atom-text-editor::shadow .source .meta.structure.list,
-atom-text-editor::shadow .text .meta.item-access,
-atom-text-editor::shadow .source .meta.item-access,
-atom-text-editor::shadow .text .brace.square,
-atom-text-editor::shadow .source .brace.square {
+atom-text-editor.editor .syntax--text .syntax--meta.syntax--structure.syntax--list,
+atom-text-editor.editor .syntax--source .syntax--meta.syntax--structure.syntax--list,
+atom-text-editor.editor .syntax--text .syntax--meta.syntax--item-access,
+atom-text-editor.editor .syntax--source .syntax--meta.syntax--item-access,
+atom-text-editor.editor .syntax--text .syntax--brace.syntax--square,
+atom-text-editor.editor .syntax--source .syntax--brace.syntax--square {
   color: #88f;
 }
-atom-text-editor::shadow .text .meta.selector.css,
-atom-text-editor::shadow .source .meta.selector.css,
-atom-text-editor::shadow .text .brace.curly,
-atom-text-editor::shadow .source .brace.curly,
-atom-text-editor::shadow .text .punctuation.property-list,
-atom-text-editor::shadow .source .punctuation.property-list {
+atom-text-editor.editor .syntax--text .syntax--meta.syntax--selector.syntax--css,
+atom-text-editor.editor .syntax--source .syntax--meta.syntax--selector.syntax--css,
+atom-text-editor.editor .syntax--text .syntax--brace.syntax--curly,
+atom-text-editor.editor .syntax--source .syntax--brace.syntax--curly,
+atom-text-editor.editor .syntax--text .syntax--punctuation.syntax--property-list,
+atom-text-editor.editor .syntax--source .syntax--punctuation.syntax--property-list {
   color: #444;
 }
-atom-text-editor::shadow .text .dictionary,
-atom-text-editor::shadow .source .dictionary {
+atom-text-editor.editor .syntax--text .syntax--dictionary,
+atom-text-editor.editor .syntax--source .syntax--dictionary {
   color: #888;
 }
-atom-text-editor::shadow .text .dictionary.separator,
-atom-text-editor::shadow .source .dictionary.separator {
+atom-text-editor.editor .syntax--text .syntax--dictionary.syntax--separator,
+atom-text-editor.editor .syntax--source .syntax--dictionary.syntax--separator {
   color: #444;
 }
-atom-text-editor::shadow .text .dictionary.separator.key-value,
-atom-text-editor::shadow .source .dictionary.separator.key-value {
+atom-text-editor.editor .syntax--text .syntax--dictionary.syntax--separator.syntax--key-value,
+atom-text-editor.editor .syntax--source .syntax--dictionary.syntax--separator.syntax--key-value {
   color: #444;
 }
-atom-text-editor::shadow .text .punctuation.separator.parameters,
-atom-text-editor::shadow .source .punctuation.separator.parameters,
-atom-text-editor::shadow .text .comma,
-atom-text-editor::shadow .source .comma {
+atom-text-editor.editor .syntax--text .syntax--punctuation.syntax--separator.syntax--parameters,
+atom-text-editor.editor .syntax--source .syntax--punctuation.syntax--separator.syntax--parameters,
+atom-text-editor.editor .syntax--text .syntax--comma,
+atom-text-editor.editor .syntax--source .syntax--comma {
   color: #44f;
 }
-atom-text-editor::shadow .text .period,
-atom-text-editor::shadow .source .period {
+atom-text-editor.editor .syntax--text .syntax--period,
+atom-text-editor.editor .syntax--source .syntax--period {
   color: #888;
 }
-atom-text-editor::shadow .text .constant,
-atom-text-editor::shadow .source .constant {
+atom-text-editor.editor .syntax--text .syntax--constant,
+atom-text-editor.editor .syntax--source .syntax--constant {
   color: #88f;
 }
-atom-text-editor::shadow .text .constant.numeric,
-atom-text-editor::shadow .source .constant.numeric {
+atom-text-editor.editor .syntax--text .syntax--constant.syntax--numeric,
+atom-text-editor.editor .syntax--source .syntax--constant.syntax--numeric {
   color: #aaf;
 }
-atom-text-editor::shadow .text .keyword.operator,
-atom-text-editor::shadow .source .keyword.operator {
+atom-text-editor.editor .syntax--text .syntax--keyword.syntax--operator,
+atom-text-editor.editor .syntax--source .syntax--keyword.syntax--operator {
   color: #66f;
 }
-atom-text-editor::shadow .text .keyword.control,
-atom-text-editor::shadow .source .keyword.control {
+atom-text-editor.editor .syntax--text .syntax--keyword.syntax--control,
+atom-text-editor.editor .syntax--source .syntax--keyword.syntax--control {
   color: #88f;
 }
-atom-text-editor::shadow .text .keyword.control.import,
-atom-text-editor::shadow .source .keyword.control.import {
+atom-text-editor.editor .syntax--text .syntax--keyword.syntax--control.syntax--import,
+atom-text-editor.editor .syntax--source .syntax--keyword.syntax--control.syntax--import {
   color: #888;
 }
-atom-text-editor::shadow .text .variable,
-atom-text-editor::shadow .source .variable {
+atom-text-editor.editor .syntax--text .syntax--variable,
+atom-text-editor.editor .syntax--source .syntax--variable {
   color: #aaf;
 }
-atom-text-editor::shadow .text .variable.parameter.function,
-atom-text-editor::shadow .source .variable.parameter.function {
+atom-text-editor.editor .syntax--text .syntax--variable.syntax--parameter.syntax--function,
+atom-text-editor.editor .syntax--source .syntax--variable.syntax--parameter.syntax--function {
   color: #88f;
 }
-atom-text-editor::shadow .text .string,
-atom-text-editor::shadow .source .string {
+atom-text-editor.editor .syntax--text .syntax--string,
+atom-text-editor.editor .syntax--source .syntax--string {
   color: #0a0;
 }
-atom-text-editor::shadow .text .string.punctuation.definition,
-atom-text-editor::shadow .source .string.punctuation.definition {
+atom-text-editor.editor .syntax--text .syntax--string.syntax--punctuation.syntax--definition,
+atom-text-editor.editor .syntax--source .syntax--string.syntax--punctuation.syntax--definition {
   color: #060;
 }
-atom-text-editor::shadow .text .inherited-class,
-atom-text-editor::shadow .source .inherited-class {
+atom-text-editor.editor .syntax--text .syntax--inherited-class,
+atom-text-editor.editor .syntax--source .syntax--inherited-class {
   color: #ff8;
 }
-atom-text-editor::shadow .text .variable.assignment,
-atom-text-editor::shadow .source .variable.assignment {
+atom-text-editor.editor .syntax--text .syntax--variable.syntax--assignment,
+atom-text-editor.editor .syntax--source .syntax--variable.syntax--assignment {
   color: #ff8;
 }
-atom-text-editor::shadow .text .property-name,
-atom-text-editor::shadow .source .property-name {
+atom-text-editor.editor .syntax--text .syntax--property-name,
+atom-text-editor.editor .syntax--source .syntax--property-name {
   color: #88f;
 }
-atom-text-editor::shadow .text .separator.key-value,
-atom-text-editor::shadow .source .separator.key-value {
+atom-text-editor.editor .syntax--text .syntax--separator.syntax--key-value,
+atom-text-editor.editor .syntax--source .syntax--separator.syntax--key-value {
   color: #880;
 }
-atom-text-editor::shadow .text.stylus,
-atom-text-editor::shadow .source.stylus {
+atom-text-editor.editor .syntax--text.syntax--stylus,
+atom-text-editor.editor .syntax--source.syntax--stylus {
   color: #44f;
 }
-atom-text-editor::shadow .text .tag,
-atom-text-editor::shadow .source .tag {
+atom-text-editor.editor .syntax--text .syntax--tag,
+atom-text-editor.editor .syntax--source .syntax--tag {
   color: #888;
 }
-atom-text-editor::shadow .text .tag.entity,
-atom-text-editor::shadow .source .tag.entity {
+atom-text-editor.editor .syntax--text .syntax--tag.syntax--entity,
+atom-text-editor.editor .syntax--source .syntax--tag.syntax--entity {
   color: #88f;
 }
-atom-text-editor::shadow .text .tag.class,
-atom-text-editor::shadow .source .tag.class {
+atom-text-editor.editor .syntax--text .syntax--tag.syntax--class,
+atom-text-editor.editor .syntax--source .syntax--tag.syntax--class {
   color: #aaf;
 }
-atom-text-editor::shadow .text .tag.id,
-atom-text-editor::shadow .source .tag.id {
+atom-text-editor.editor .syntax--text .syntax--tag.syntax--id,
+atom-text-editor.editor .syntax--source .syntax--tag.syntax--id {
   color: #ff0;
 }
-atom-text-editor::shadow .text .tag.punctuation,
-atom-text-editor::shadow .source .tag.punctuation,
-atom-text-editor::shadow .text .terminator,
-atom-text-editor::shadow .source .terminator {
+atom-text-editor.editor .syntax--text .syntax--tag.syntax--punctuation,
+atom-text-editor.editor .syntax--source .syntax--tag.syntax--punctuation,
+atom-text-editor.editor .syntax--text .syntax--terminator,
+atom-text-editor.editor .syntax--source .syntax--terminator {
   color: #444;
 }
-atom-text-editor::shadow .text.noon,
-atom-text-editor::shadow .source.noon {
+atom-text-editor.editor .syntax--text.syntax--noon,
+atom-text-editor.editor .syntax--source.syntax--noon {
   color: #ff8;
 }
-atom-text-editor::shadow .text .key.noon,
-atom-text-editor::shadow .source .key.noon {
+atom-text-editor.editor .syntax--text .syntax--key.syntax--noon,
+atom-text-editor.editor .syntax--source .syntax--key.syntax--noon {
   color: #f80;
 }
-atom-text-editor::shadow .text .punctuation.array.noon,
-atom-text-editor::shadow .source .punctuation.array.noon {
+atom-text-editor.editor .syntax--text .syntax--punctuation.syntax--array.syntax--noon,
+atom-text-editor.editor .syntax--source .syntax--punctuation.syntax--array.syntax--noon {
   color: #88f;
 }
-atom-text-editor::shadow .text .punctuation.dense.noon,
-atom-text-editor::shadow .source .punctuation.dense.noon {
+atom-text-editor.editor .syntax--text .syntax--punctuation.syntax--dense.syntax--noon,
+atom-text-editor.editor .syntax--source .syntax--punctuation.syntax--dense.syntax--noon {
   color: #444;
   font-weight: bold;
 }
-atom-text-editor::shadow .text .key.dense.noon,
-atom-text-editor::shadow .source .key.dense.noon {
+atom-text-editor.editor .syntax--text .syntax--key.syntax--dense.syntax--noon,
+atom-text-editor.editor .syntax--source .syntax--key.syntax--dense.syntax--noon {
   color: #888;
 }
-atom-text-editor::shadow .text .constant.color.noon,
-atom-text-editor::shadow .source .constant.color.noon {
+atom-text-editor.editor .syntax--text .syntax--constant.syntax--color.syntax--noon,
+atom-text-editor.editor .syntax--source .syntax--constant.syntax--color.syntax--noon {
   color: #faa;
 }
-atom-text-editor::shadow .text .punctuation.bracket.noon,
-atom-text-editor::shadow .source .punctuation.bracket.noon {
+atom-text-editor.editor .syntax--text .syntax--punctuation.syntax--bracket.syntax--noon,
+atom-text-editor.editor .syntax--source .syntax--punctuation.syntax--bracket.syntax--noon {
   color: #884;
 }
-atom-text-editor::shadow .text .punctuation.dot.noon,
-atom-text-editor::shadow .source .punctuation.dot.noon {
+atom-text-editor.editor .syntax--text .syntax--punctuation.syntax--dot.syntax--noon,
+atom-text-editor.editor .syntax--source .syntax--punctuation.syntax--dot.syntax--noon {
   color: #a60;
   font-weight: bold;
 }
-atom-text-editor::shadow .text .punctuation.dim.noon,
-atom-text-editor::shadow .source .punctuation.dim.noon {
+atom-text-editor.editor .syntax--text .syntax--punctuation.syntax--dim.syntax--noon,
+atom-text-editor.editor .syntax--source .syntax--punctuation.syntax--dim.syntax--noon {
   color: #a60;
 }
-atom-text-editor::shadow .text .punctuation.regex.noon,
-atom-text-editor::shadow .source .punctuation.regex.noon {
+atom-text-editor.editor .syntax--text .syntax--punctuation.syntax--regex.syntax--noon,
+atom-text-editor.editor .syntax--source .syntax--punctuation.syntax--regex.syntax--noon {
   color: #f00;
   font-weight: bold;
 }
-atom-text-editor::shadow .text .punctuation.key.escape.noon,
-atom-text-editor::shadow .source .punctuation.key.escape.noon {
+atom-text-editor.editor .syntax--text .syntax--punctuation.syntax--key.syntax--escape.syntax--noon,
+atom-text-editor.editor .syntax--source .syntax--punctuation.syntax--key.syntax--escape.syntax--noon {
   color: #600;
   font-weight: bold;
 }
-atom-text-editor::shadow .text .punctuation.value.escape.noon,
-atom-text-editor::shadow .source .punctuation.value.escape.noon {
+atom-text-editor.editor .syntax--text .syntax--punctuation.syntax--value.syntax--escape.syntax--noon,
+atom-text-editor.editor .syntax--source .syntax--punctuation.syntax--value.syntax--escape.syntax--noon {
   color: #333;
   font-weight: bold;
 }

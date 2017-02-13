@@ -48,32 +48,32 @@ color.variable       = color.yellow-bright
 *  000   000  000       000  0000  000       000   000  000   000  000    
 *   0000000   00000000  000   000  00000000  000   000  000   000  0000000
 */
-:host
+
 atom-text-editor
-atom-text-editor::shadow
+atom-text-editor.editor
 
     background: color.background
     color:      color.text
     .selection .region
         background-color: color.selection
         border-radius:    4px
-    .text
-    .source
+    .syntax--text
+    .syntax--source
         color: color.text
         
-        .comment
+        .syntax--comment
             color: color.comment
-            &.block
+            &.syntax--block
                 color: color.comment-block
                 
-            &.punctuation
+            &.syntax--punctuation
                 color: color.comment-marker
                 
             .selection
             &.selection
                 color: color.orange
             
-atom-text-editor::shadow
+atom-text-editor.editor
 
     //__________________________________________________________________________________________________________________
     /*
@@ -125,152 +125,154 @@ atom-text-editor::shadow
     *  0000000    0000000    0000000   000   000   0000000  00000000
     */
     
-    .text
-    .source
+    .syntax--text
+    .syntax--source
 
-        .meta.preprocessor.include.c     
-        .meta.preprocessor.macro.c
+        .syntax--meta.syntax--preprocessor.syntax--include.syntax--c     
+        .syntax--meta.syntax--preprocessor.syntax--macro.syntax--c
             color: color.blue
 
-        .entity
-        .class
+        .syntax--entity
+        .syntax--class
             color: color.yellow
-            &.punctuation
+            &.syntax--punctuation
                 color: darken(color.orange-bright, 20)
-        .attribute-name
+        .syntax--attribute-name
             color: color.orange-bright
             
-        .storage // class, var, etc
+        .syntax--storage // class, var, etc
             color: color.blue-very-bright
 
-        .function
+        .syntax--function
             color: color.blue-very-bright
-            &.name
+            &.syntax--name
                 color: color.yellow-bright
-            &.storage // -> =>
+            &.syntax--storage // -> =>
                 color: color.blue-medium
-            &.support // require, len, indexOf. etc
+            &.syntax--support // require, len, indexOf. etc
                 color: color.gray
-        .function-call
+        .syntax--function-call
             color: color.orange-bright
-            &.arguments
+            &.syntax--arguments
                 color: color.blue-very-bright
-        .function.parameter
+        .syntax--function.syntax--parameter
             color: color.orange-bright
                             
-        .brace.round  
+        .syntax--brace.syntax--round  
             color: color.blue-medium
-        .meta.structure.list
-        .meta.item-access
-        .brace.square
+        .syntax--meta.syntax--structure.syntax--list
+        .syntax--meta.syntax--item-access
+        .syntax--brace.syntax--square
                 color: color.blue-bright
         
-        .meta.selector.css
-        .brace.curly
-        .punctuation.property-list
+        .syntax--meta.syntax--selector.syntax--css
+        .syntax--brace.syntax--curly
+        .syntax--punctuation.syntax--property-list
             color: color.gray-dark
             
-        .dictionary
+        .syntax--dictionary
             color: color.gray
-            &.separator
+            &.syntax--separator
                 color: color.gray-dark
-                &.key-value 
+                &.syntax--key-value 
                     color: color.gray-dark
         
-        .punctuation.separator.parameters
-        .comma
+        .syntax--punctuation.syntax--separator.syntax--parameters
+        .syntax--comma
             color: color.blue
         
-        .period
+        .syntax--period
             color: color.gray
 
-        .constant
+        .syntax--constant
             color: color.blue-bright
-            &.numeric  
+            &.syntax--numeric  
                 color: color.blue-very-bright
                 
-        .keyword // new, =, -, +, :, isnt, is
-            &.operator 
+        .syntax--keyword // new, =, -, +, :, isnt, is
+            &.syntax--operator 
                 color: color.blue-medium
-            &.control  // do, if, return, then, switch, for
+            &.syntax--control  // do, if, return, then, switch, for
                 color: color.blue-bright
-                &.import
+                &.syntax--import
                     color: color.gray
 
-        .variable            
-            &.parameter.function
+        .syntax--variable            
+            &.syntax--parameter.syntax--function
                 color: color.blue-bright
 
             color: color.blue-very-bright
                 
-        .string
+        .syntax--string
             color: color.green
-            &.punctuation.definition
+            &.syntax--punctuation.syntax--definition
                 color: color.green-dark
                                 
-        .inherited-class
+        .syntax--inherited-class
             color: color.yellow-bright
         
-        .variable.assignment // local variables and dict keys
+        .syntax--variable.syntax--assignment // local variables and dict keys
             color: color.variable
-        .property-name
+        .syntax--property-name
             color: color.blue-bright
         
-        .separator.key-value   
+        .syntax--separator.syntax--key-value   
             color: darken(color.variable, 50)
             
-        &.stylus
+        &.syntax--stylus
             color: color.blue
 
-        .tag
+        .syntax--tag
             color: color.gray
-            &.entity
+            &.syntax--entity
                 color: color.blue-bright
-            &.class
+            &.syntax--class
                 color: color.blue-very-bright
-            &.id
+            &.syntax--id
                 color: color.yellow
-        .tag.punctuation
-        .terminator
+        .syntax--tag.syntax--punctuation
+        .syntax--terminator
             color: color.gray-dark
 
-        &.noon
+        &.syntax--noon
             color: #ff8
 
-        .key.noon
+        .syntax--key.syntax--noon
             color: #f80
 
-        .punctuation.array.noon
-            color: #88f
+        .syntax--punctuation
+            &.syntax--array.syntax--noon
+                color: #88f
 
-        .punctuation.dense.noon
-            color: #444
-            font-weight: bold
+            &.syntax--dense.syntax--noon
+                color: #444
+                font-weight: bold
 
-        .key.dense.noon
+        .syntax--key.syntax--dense.syntax--noon
             color: #888
 
-        .constant.color.noon
+        .syntax--constant.syntax--color.syntax--noon
             color: #faa
 
-        .punctuation.bracket.noon
-            color: #884
+        .syntax--punctuation
+            &.syntax--bracket.syntax--noon
+                color: #884
 
-        .punctuation.dot.noon
-            color: #a60
-            font-weight: bold
+            &.syntax--dot.syntax--noon
+                color: #a60
+                font-weight: bold
 
-        .punctuation.dim.noon
-            color: #a60
+            &.syntax--dim.syntax--noon
+                color: #a60
 
-        .punctuation.regex.noon
-            color: #f00
-            font-weight: bold
+            &.syntax--regex.syntax--noon
+                color: #f00
+                font-weight: bold
 
-        .punctuation.key.escape.noon
-            color: #600    
-            font-weight: bold
+            &.syntax--key.syntax--escape.syntax--noon
+                color: #600    
+                font-weight: bold
 
-        .punctuation.value.escape.noon
-            color: #333    
-            font-weight: bold
+            &.syntax--value.syntax--escape.syntax--noon
+                color: #333    
+                font-weight: bold
